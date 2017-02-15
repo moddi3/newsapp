@@ -1,19 +1,24 @@
 <template>
-  <div class="uk-container uk-container-expand" id='app'>
-    <source-selection @sourceChanged="sourceChanged"></source-selection>
-    <news-list :source="source"></news-list>
+  <div class="uk-section uk-section-default" id='app'>
+    <gh-corner></gh-corner>
+    <div class="uk-container uk-container-small uk-position-relative">
+      <source-selection @sourceChanged="sourceChanged"></source-selection>
+      <news-list :source="source"></news-list>
+    </div>
   </div>
 </template>
 
 <script>
   import SourceSelection from './components/SourceSelection'
   import NewsList from './components/NewsList'
+  import GhCorner from './components/GithubCorner'
 
   export default {
     name: 'app',
     components: {
       SourceSelection,
-      NewsList
+      NewsList,
+      GhCorner
     },
     data() {
       return {

@@ -10,9 +10,8 @@
       </option>
     </select>
     <div class="uk-margin" v-if="source">
-      <p> {{ source.description }} </p>
+      <p class="uk-margin-bottom"> {{ source.description }} </p>
       <a class="uk-button uk-button-primary" :href="source.url">Перейти на сайт {{ source.name }} </a>
-    <hr class="uk-divider-icon">
     </div>
   </div>
 </template>
@@ -52,5 +51,10 @@ import apiKey from '../../config/api.key'
 </script>
 
 <style>
-
+.faded-enter-active, .faded-leave-active {
+  transition: opacity 3s
+}
+.faded-enter, .faded-leave-to /* .fade-leave-active для <2.1.8 */ {
+  opacity: 0
+}
 </style>
