@@ -10,7 +10,7 @@
           <a class="uk-link-reset" :href='article.url' target='_blank'>{{ article.title }}</a>
         </h1>
 
-        <p class="uk-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
+        <p v-if="article.author !== null" class="uk-article-meta">Written by <a class="uk-text-bold" href="#">{{ article.author }}</a></p>
 
         <p>{{article.description}}</p>
         <!--<a :href='article.url' target='_blank' class='uk-cover-container'>
@@ -26,24 +26,6 @@
 
       </article>
     </transition-group>
-    <transition-group name="fade">
-      <div class='uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin' v-for='article in articles' uk-grid
-        :key="source">
-        <a :href='article.url' target='_blank' class='uk-cover-container'>
-          <div class='uk-card-media-left'>
-            <img :src='article.urlToImage' :alt='article.title' :title='article.title' uk-cover>
-          </div>
-        </a>
-        <div>
-          <div class='uk-card-body'>
-            <h3 class='uk-card-title'>
-              <a :href='article.url' target='_blank'> {{ article.title }} </a>
-            </h3>
-            <p> {{article.description}} </p>
-          </div>
-        </div>
-  </div>
-  </transition-group>
   </div>
 </template>
 
@@ -67,6 +49,7 @@
         setTimeout(function () {
           self.axios.get('https://newsapi.org/v1/articles?source=' + source + '&apiKey=' + apiKey)
             .then(function (res) {
+              console.log(res);
               self.articles = res.data.articles;
               self.isLoaded = true;
             })

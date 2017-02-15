@@ -1,0 +1,126 @@
+
+* {
+  /*font-family: 'Hack', 'Avenir', Helvetica, Arial, sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.faded-enter-active, .faded-leave-active {
+  transition: opacity 3s
+}
+.faded-enter, .faded-leave-to /* .fade-leave-active для <2.1.8 */ {
+  opacity: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*{
+   transition: all 2s
+ }*/
+.fade-enter-active{
+  transition: opacity 1s;
+}
+.fade-leave-active{
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active для <2.1.8 */ {
+  opacity: 0;
+}
+.spinner{
+  position: absolute;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+0%, 100% {
+        transform: rotate(0)
+}
+20%,
+    60% {
+        transform: rotate(-25deg)
+}
+40%,
+    80% {
+        transform: rotate(10deg)
+}
+}
+@media (max-width: 500px) {
+.github-corner:hover .octo-arm {
+        animation: none
+}
+.github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+}
+}
+
+/*# sourceMappingURL=app.0f3039cf4a4812bc6657bd763eb96143.css.map*/
